@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h3>Formulário simulando uma candidatura a uma vaga de emprego (ou quase isso)</h3>
+    <h2>Cadastre-se para a vaga</h2>
+    <form>
+        
+        <!--Informações pessoais-->
+        <fieldset border: none;>
+            <legend>Informações pessoais</legend>
+            
+            <!--Nome-->
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required> <br><br>
+            
+            <!--Email-->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="name@example.com" required> <br><br>
+            
+            <!--Senha-->
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" placeholder="mínimo 8 caracteres" minlength="8" required><br><br>
+            
+            <!--Data de Nascimento-->
+            <label for="nascimento">Data de Nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento" required> <br><br>
+            
+            <!--Sexo|precisou de outro fieldset pra ficar mais organizado-->
+            <fieldset>
+                <legend>Sexo</legend>
+                <!--Masculino-->
+                <input type="radio" id="masculino" name="sexo" value="Masculino" required>
+                <label for="masculino">Masculino</label> <br>
+                <!--Feminino-->
+                <input type="radio" id="feminino" name="sexo" value="Feminino">
+                <label for="feminino">Feminino</label> <br>
+                <!--Outro-->
+                <input type="radio" id="outro" name="sexo" value="Outro">
+                <label for="outro">Outro</label> <br>
+                <!--Pokémon-->
+                <input type="radio" id="pokemon" name="sexo" value="Pokemon">
+                <label for="pokemon">Pokémon</label> <br>
+                <!--Cadeira-->
+                <input type="radio" id="cadeira" name="sexo" value="Cadeira">
+                <label for="cadeira">Cadeira</label> <br>
+            </fieldset>
+
+            <!--CPF-->
+            <label for="CPF">CPF:</label>
+            <input type="text" id="CPF" name="CPF" placeholder="xxx.xxx.xxx-xx" required minlength="11" maxlength="11"> <br><br>
+            
+            <!--Telefone-->
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(xx) 9xxxx-xxxx" required minlength="11" maxlength="11"><br><br>
+            
+            <!--Nome da mãe-->
+            <label for="momname">Nome da Mãe:</label>
+            <input type="text" id="momname" name="momname" placeholder="Insira o nome da sua mãe" required> <br><br>
+            
+            <!--Nome do pai-->
+            <label for="dadname">Nome do Pai (Opcional):</label>
+            <input type="text" id="dadname" name="dadname" placeholder="Insira o nome do seu pai (Opcional)"><br><br>
+            
+            <!--Estado Civil precisou de outro fieldset pra ficar mais organizado-->
+            <fieldset>
+                <legend>Estado Civil</legend>
+                <!--Estado civil (select)-->
+                <!--Solteiro-->
+                <input type="radio" id="solteiro" name="civilstate" value="Solteiro" required
+                <label for="solteiro">Solteiro</label><br>
+                <!--Casado-->
+                <input type="radio" id="casado" name="civilstate" value="Casado">
+                <label for="casado">Casado</label><br>
+                <!--Viúvo(a)-->
+                <input type="radio" id="viuvo" name="civilstate" value="Viuvo">
+                <label for="viuvo">Viúvo(a)</label><br>
+            </fieldset>
+        </fieldset>
+        
+        <!--Endereço-->
+        <fieldset>
+            <legend>Endereço</legend>
+            
+            <!--País-->
+            <!--Assumi que é Brasil, não consigo fazer um sistema versátil de opções de estados ainda-->
+
+            <!--Estado-->
+            <label for="estado">Estado</label>
+            <select name="estado" id="estado">
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select> <br> <br>
+
+            <!--Cidade-->
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" name="cidade" required> <br> <br>
+            
+            <!--O resto, plmds (bairro-rua-numero)-->
+            <label for="brn">Complemento</label>
+            <input type="text" id="brn" name="brn" placeholder="Bairro, Rua, número, complemento" required> <br>
+            
+            <!--CEP-->
+            <label for="CEP">CEP:</label>
+            <input type="number" id="CEP" name="CEP" required> <br>
+            
+            <fieldset>
+                <legend>Tipo de moradia</legend>
+                <!--Casa-->
+                <input type="radio" id="casa" name="moradia" value="Casa" required>
+                <label for="casa">Casa</label> <br>
+
+                <!--Prédio-->
+                <input type="radio" id="predio" name="moradia" value="Predio">
+                <label for="predio">Prédio</label> <br>
+
+                <!--Condomínio-->
+                <input type="radio" id="condominio" name="moradia" value="Condominio">
+                <label for="condominio">Condomínio</label> <br>
+
+                <!--Pokebola-->
+                <input type="radio" id="pokebola" name="moradia" value="Pokebola">
+                <label for="pokebola">Pokébola</label> <br>
+            </fieldset>
+            
+        
+        </fieldset>
+
+        <!--Tecnologias trabalhadas-->
+        <fieldset>
+            <legend>Tecnologias que você trabalha</legend>
+            
+            <!--HTML-->
+            <input type="checkbox" id="html" name="tecnologia" value="HTML">
+            <label for="html">HTML</label> <br>
+            
+            <!--CSS-->
+            <input type="checkbox" id="css" name="tecnologia" value="CSS">
+            <label for="css">CSS</label><br>
+            
+            <!--JS-->
+            <input type="checkbox" id="js" name="tecnologia" value="JS">
+            <label for="js">JavaScript</label> <br>
+
+            <!--Python-->
+            <input type="checkbox" id="python" name="tecnologia" value="Python">
+            <label for="python">Python</label>
+        </fieldset>
+        
+        <!--Área de comentários-->
+        <label for="comentarios">Comentários:</label> <br>
+        <textarea name="comentarios" id="comentarios" placeholder="Escreva o que quiser, infelizmente não vou ler, mas se quiser, me manda mensagem"></textarea> <br> <br>
+
+        <button type="submit">Enviar formulário</button>
+        <button type="reset">Limpar formulário</button>
+    </form>
+    <hr>
+    <p>Desenvolvido com muita dedicação por <b>Gabriel Ramos</b> durante as aulas do Senai :D</p>
+</body>
+</html>
