@@ -1,0 +1,22 @@
+body{
+    background-color: aliceblue;
+    font-family: Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form{
+    background-color: lightblue;
+    padding: 30px;
+    box-shadow: 0 0 10px black;
+    width: 350px;
+}
+
+h2, h3{
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
